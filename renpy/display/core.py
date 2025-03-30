@@ -1957,6 +1957,7 @@ class Interface(object):
 
         should_skip_save = renpy.store.main_menu or renpy.store._in_replay
         if renpy.config.save_on_mobile_background and not should_skip_save:
+            renpy.loadsave.force_autosave(False, True)
             renpy.loadsave.save("_reload-1", include_screenshot=False)
 
         renpy.persistent.update(True)
