@@ -218,7 +218,7 @@ def source(variables, parts, functions, fragment, gles):
 
         if fragment:
             rv.append("""\
-precision mediump float;
+precision highp float;
 """)
 
     else:
